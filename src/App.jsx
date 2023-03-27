@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import ArticlePage from './pages/ArticlePage'
 import Home from './pages/Home'
 import Lifecycle from './pages/LifeCycle'
+import Squares from './pages/Squares'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/article" element={<ArticlePage />} />
         <Route path="/life-cycle" element={<Lifecycle />} />
+        <Route path="/square" element={<Squares />} />
       </Routes>
     </BrowserRouter>
   )
