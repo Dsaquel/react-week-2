@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
-
+import { getRandomNumber } from '../../tools/function'
 const Square = () => {
   const [background, setBackground] = useState('')
   const [height, setHeight] = useState('50px')
@@ -12,9 +12,9 @@ const Square = () => {
   }, [])
 
   useEffect(() => {
-    setHeight(Math.floor(Math.random() * (100 - 50 + 1) + 50))
+    setHeight(getRandomNumber(50, 100))
   }, [background])
-  
+
   return (
     <div
       style={{ width: '50px', height, background: background }}

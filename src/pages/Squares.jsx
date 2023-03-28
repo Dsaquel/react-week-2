@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import Square from '../components/square/Square'
+import { getRandomNumber } from '../tools/function'
 
 const Squares = () => {
   const [squareNumber, setSquareNumber] = useState(6)
-
-  const getRandomNumber = () => Math.floor(Math.random() * (10 - 5 + 1) + 5)
 
   return (
     <div>
@@ -14,7 +13,9 @@ const Squares = () => {
           return <Square key={i} />
         })}
       </div>
-      <button onClick={() => setSquareNumber(getRandomNumber)}>click</button>
+      <button onClick={() => setSquareNumber(getRandomNumber(5, 10))}>
+        click
+      </button>
     </div>
   )
 }

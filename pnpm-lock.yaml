@@ -6,12 +6,14 @@ specifiers:
   '@vitejs/plugin-react': ^3.1.0
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-hook-form: ^7.43.8
   react-router-dom: ^6.9.0
   vite: ^4.2.0
 
 dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hook-form: 7.43.8_react@18.2.0
   react-router-dom: 6.9.0_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
@@ -748,6 +750,15 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-hook-form/7.43.8_react@18.2.0:
+    resolution: {integrity: sha512-BQm+Ge5KjTk1EchDBRhdP8Pkb7MArO2jFF+UWYr3rtvh6197khi22uloLqlWeuY02ItlCzPunPsFt1/q9wQKnw==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-refresh/0.14.0:
