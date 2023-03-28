@@ -8,6 +8,7 @@ import Cars from './pages/Cars'
 import Home from './pages/Home'
 import Lifecycle from './pages/LifeCycle'
 import ReactHookForm from './pages/ReactHookForm'
+import Request from './pages/Request'
 import Squares from './pages/Squares'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/square" element={<Squares />} />
         <Route path="/react-hook-form" element={<ReactHookForm />} />
         <Route path="/cars" element={<Cars />} />
+        <Route path="/request" element={<Request />} />
       </Routes>
     </BrowserRouter>
   )

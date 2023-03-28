@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form'
+import { set, useForm } from 'react-hook-form'
 
 const FormCar = ({ setCars }) => {
   const {
@@ -6,10 +6,12 @@ const FormCar = ({ setCars }) => {
     handleSubmit,
     formState: { errors },
     reset,
+    setFocus
   } = useForm()
 
   const onSubmit = (data) => {
     setCars((rest) => [...rest, data])
+    setFocus('name')
     reset()
   }
 
