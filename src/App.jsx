@@ -8,6 +8,7 @@ import Cars from './pages/Cars'
 import ExerciceApi from './pages/ExerciceApi'
 import Home from './pages/Home'
 import Lifecycle from './pages/LifeCycle'
+import Meteo from './pages/Meteo'
 import ReactHookForm from './pages/ReactHookForm'
 import Request from './pages/Request'
 import Squares from './pages/Squares'
@@ -25,6 +26,7 @@ function App() {
         <Route path="/cars" element={<Cars />} />
         <Route path="/request" element={<Request />} />
         <Route path="/exercice-api" element={<ExerciceApi />} />
+        <Route path="/meteo" element={<Meteo />} />
       </Routes>
     </BrowserRouter>
   )
