@@ -1,7 +1,6 @@
 import Article from './Article'
 
 const Articles = ({ items }) => {
-  console.log(items)
   return (
     <div>
       {items.map((item, i) => {

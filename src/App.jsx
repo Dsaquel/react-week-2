@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import ArticlePage from './pages/ArticlePage'
 import Cars from './pages/Cars'
+import ExerciceApi from './pages/ExerciceApi'
 import Home from './pages/Home'
 import Lifecycle from './pages/LifeCycle'
 import ReactHookForm from './pages/ReactHookForm'
@@ -23,6 +24,7 @@ function App() {
         <Route path="/react-hook-form" element={<ReactHookForm />} />
         <Route path="/cars" element={<Cars />} />
         <Route path="/request" element={<Request />} />
+        <Route path="/exercice-api" element={<ExerciceApi />} />
       </Routes>
     </BrowserRouter>
   )

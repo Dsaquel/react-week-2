@@ -11,6 +11,7 @@ const Navbar = () => {
       <Link to="/react-hook-form">react hook form</Link>
       <Link to="/cars">cars</Link>
       <Link to="/request">request</Link>
+      <Link to="/exercice-api">exercice api</Link>
     </div>
   )
 }
