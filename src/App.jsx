@@ -12,6 +12,7 @@ import Meteo from './pages/Meteo'
 import ReactHookForm from './pages/ReactHookForm'
 import Request from './pages/Request'
 import Squares from './pages/Squares'
+import Users from './pages/Users'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/request" element={<Request />} />
         <Route path="/exercice-api" element={<ExerciceApi />} />
         <Route path="/meteo" element={<Meteo />} />
+        <Route path="/users" element={<Users />} />
       </Routes>
     </BrowserRouter>
   )
