@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from 'react'
-import { ContextsPageContext } from '../../pages/Contexts'
+import { ContextsPageContext } from '../../contexts/ContextsContext'
 
 const Toolbar = () => {
   const { setTheme } = useContext(ContextsPageContext)

@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Articles from '../components/contexts/Articles'
 import Toolbar from '../components/contexts/Toolbar'
+import ContextsContextProvider from '../contexts/ContextsContext'
 
 const articles = [
   {
@@ -17,20 +18,16 @@ const articles = [
   },
 ]
 
-export const ContextsPageContext = React.createContext()
-
 const Contexts = () => {
-  const [theme, setTheme] = useState('light')
-
   return (
-    <ContextsPageContext.Provider value={{ theme, setTheme }}>
+    <ContextsContextProvider>
       <div>
         <h1>Contexts</h1>
 
         <Toolbar />
         <Articles articles={articles} />
       </div>
-    </ContextsPageContext.Provider>
+    </ContextsContextProvider>
   )
 }
 

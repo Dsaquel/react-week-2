@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { ContextsPageContext } from '../../pages/Contexts'
+import { ContextsPageContext } from '../../contexts/ContextsContext'
 
 const Title = ({ title }) => {
   const { theme } = useContext(ContextsPageContext)
