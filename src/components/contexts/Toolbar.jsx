@@ -8,7 +8,10 @@ const Toolbar = () => {
   return (
     <div>
       <button
-        onClick={() => setTheme((prev) => (prev === 'light' ? 'dark' : 'light')) } >
+        onClick={() =>
+          setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
+        }
+      >
         Theme
       </button>
     </div>

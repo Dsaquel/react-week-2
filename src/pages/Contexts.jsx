@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import Articles from '../components/contexts/Articles'
 import Toolbar from '../components/contexts/Toolbar'
 import ContextsContextProvider from '../contexts/ContextsContext'
@@ -19,10 +20,14 @@ const articles = [
 ]
 
 const Contexts = () => {
+  const [theme, setTheme] = useState()
+
   return (
-    <ContextsContextProvider>
+    <ContextsContextProvider value={{ theme, setTheme }}>
       <div>
-        <h1>Contexts</h1>
+        <h1 style={{ color: theme === 'light' ? 'black' : 'grey' }}>
+          Contexts
+        </h1>
 
         <Toolbar />
         <Articles articles={articles} />
