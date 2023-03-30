@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import ArticlePage from './pages/ArticlePage'
 import Cars from './pages/Cars'
+import Contexts from './pages/Contexts'
 import ExerciceApi from './pages/ExerciceApi'
 import Home from './pages/Home'
 import Lifecycle from './pages/LifeCycle'
@@ -29,6 +30,7 @@ function App() {
         <Route path="/exercice-api" element={<ExerciceApi />} />
         <Route path="/meteo" element={<Meteo />} />
         <Route path="/users" element={<Users />} />
+        <Route path="/contexts" element={<Contexts />} />
       </Routes>
     </BrowserRouter>
   )

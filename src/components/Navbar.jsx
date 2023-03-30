@@ -14,6 +14,7 @@ const Navbar = () => {
       <Link to="/exercice-api">exercice api</Link>
       <Link to="/meteo">meteo</Link>
       <Link to="/users">users</Link>
+      <Link to="/contexts">contexts</Link>
     </div>
   )
 }
