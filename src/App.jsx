@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
 import ArticlePage from './pages/ArticlePage'
+import Auth from './pages/Auth'
 import Cars from './pages/Cars'
 import Contexts from './pages/Contexts'
 import ExerciceApi from './pages/ExerciceApi'
@@ -31,6 +32,7 @@ function App() {
         <Route path="/meteo" element={<Meteo />} />
         <Route path="/users" element={<Users />} />
         <Route path="/contexts" element={<Contexts />} />
+        <Route path="/auth" element={<Auth />} />
       </Routes>
     </BrowserRouter>
   )
