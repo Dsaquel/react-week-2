@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Articles from '../components/contexts/Articles'
 import Toolbar from '../components/contexts/Toolbar'
 
@@ -27,8 +27,8 @@ const Contexts = () => {
       <div>
         <h1>Contexts</h1>
 
-        <Toolbar setTheme={setTheme} />
-        <Articles articles={articles} theme={theme} />
+        <Toolbar />
+        <Articles articles={articles} />
       </div>
     </ContextsPageContext.Provider>
   )
