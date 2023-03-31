@@ -5,7 +5,9 @@ const StudentsList = () => {
   const { students, setStudents } = useContextStudent()
 
   const sortByLastname = () => {
-    setStudents(students.sort((a, b) => b.lastname.localeCompare(a.lastname)))
+    setStudents(
+      [...students].sort((a, b) => a.lastname.localeCompare(b.lastname))
+    )
   }
 
   return (
