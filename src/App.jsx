@@ -15,6 +15,7 @@ import ReactHookForm from './pages/ReactHookForm'
 import Request from './pages/Request'
 import Squares from './pages/Squares'
 import Users from './pages/Users'
+import Students from './pages/Students'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/users" element={<Users />} />
         <Route path="/contexts" element={<Contexts />} />
         <Route path="/auth" element={<Auth />} />
+        <Route path="/students" element={<Students />} />
       </Routes>
     </BrowserRouter>
   )

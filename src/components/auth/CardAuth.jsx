@@ -19,7 +19,6 @@ const CardAuth = () => {
       setUser(dummyUsers.data[0])
     } catch (e) {
       console.log(e)
-    } finally {
     }
   }
 
