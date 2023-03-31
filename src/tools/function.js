@@ -9,3 +9,21 @@ export const GEOCODING_API_BASE_URL =
   'http://api.openweathermap.org/geo/1.0/direct'
 export const DUMMY_API_KEY = '64243be800eb51e81b9eca66'
 export const DUMMY_API_BASE_URL = 'https://dummyapi.io/data/v1'
+
+export function shuffleArray(array) {
+  let currentIndex = array.length,
+    randomIndex
+
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex)
+    currentIndex--
+    ;[array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ]
+  }
+
+  return array
+}
+
+export const getRandomString = () => Math.random().toString(36).slice(2, 7)

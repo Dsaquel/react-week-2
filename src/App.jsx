@@ -16,6 +16,7 @@ import Request from './pages/Request'
 import Squares from './pages/Squares'
 import Users from './pages/Users'
 import Students from './pages/Students'
+import Memory from './pages/Memory'
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/contexts" element={<Contexts />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/students" element={<Students />} />
+        <Route path="/memory" element={<Memory />} />
       </Routes>
     </BrowserRouter>
   )
