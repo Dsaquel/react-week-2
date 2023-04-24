@@ -5,21 +5,23 @@ import { useState } from 'react'
 
 export const MemoryPageContext = React.createContext()
 
-const MemoryContextProvider = ({ children }) => {
+const MemoryContextProvider = ({ children, cards }) => {
+  const getTimeout = setTimeout(() => {
+    setIdentifiersTimer(null)
+  }, 2000)
   const [idsFound, setIdsFound] = useState([])
   const [identifierWaiting, setIdentifierWaiting] = useState(null)
   const [identifiersTimer, setIdentifiersTimer] = useState(null)
 
   useEffect(() => {
     if (!identifiersTimer) return
-    setTimeout(() => {
-      setIdentifiersTimer(null)
-    }, 2000)
+    getTimeout
   }, [identifiersTimer])
 
   return (
     <MemoryPageContext.Provider
       value={{
+        ...cards,
         idsFound,
         setIdsFound,
         identifierWaiting,

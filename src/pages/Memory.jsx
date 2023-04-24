@@ -1,8 +1,8 @@
-import { useEffect } from 'react'
 import { useState } from 'react'
-import { getRandomString, shuffleArray } from '../tools/function'
 import MemoryCard from '../components/memory/MemoryCard'
 import MemoryContextProvider from '../contexts/MemoryContext'
+import { getRandomString, shuffleArray } from '../tools/function'
+import { useEffect } from 'react'
 
 const Memory = () => {
   const [cards, setCards] = useState()
@@ -31,12 +31,12 @@ const Memory = () => {
     createCards()
   }, [])
   return (
-    <MemoryContextProvider value={{ cards }}>
+    <MemoryContextProvider>
       <div>
         {cards &&
           cards.map((card, i) => (
             <div key={i}>
-              <MemoryCard card={card} />
+              <MemoryCard cards={cards} card={card} />
             </div>
           ))}
       </div>

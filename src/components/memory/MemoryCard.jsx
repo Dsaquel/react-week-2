@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './MemoryCard.css'
 import { useContextMemory } from '../../contexts/MemoryContext'
 
-const MemoryCard = ({ card }) => {
+const MemoryCard = ({ card, cards }) => {
   const {
     idsFound,
     identifierWaiting,
@@ -19,7 +19,8 @@ const MemoryCard = ({ card }) => {
     setIsCardShow(true)
 
     if (identifierWaiting) {
-      if (identifierWaiting === card.id) {
+      const searchCard = searchCardByIdentifier(card.identifier)
+      if (searchCard.id === card.id) {
         setIdsFound((rest) => [...rest, card.id])
         setIdentifierWaiting(null)
       }
@@ -31,6 +32,14 @@ const MemoryCard = ({ card }) => {
       handleTimeEnd(2000)
     }
   }
+
+  const searchCardByIdentifier = () => {
+    if (identifierWaiting) {
+      return cards.find((card) => card.identifier === identifierWaiting)
+    }
+    return null
+  }
+
   const handleTimeEnd = (timer) => {
     setTimeout(() => {
       setIsCardShow(false)
@@ -45,7 +54,7 @@ const MemoryCard = ({ card }) => {
       (identifiersTimer && identifiersTimer.includes(card.identifier)) ? (
         <div>{card.content}</div>
       ) : (
-        <span>X</span>
+        <span>X {card.id}</span>
       )}
     </div>
   )
